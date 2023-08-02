@@ -1709,11 +1709,41 @@ datum/cookingrecipe/flockbrainburger
 	cookbonus = 8
 	output = /obj/item/reagent_containers/food/snacks/meatloaf
 
+/datum/cookingrecipe/cereal_box
+	item1 = /obj/item/reagent_containers/food/snacks/ingredient/dough_s
+	item2 = /obj/item/reagent_containers/food/snacks/condiment/chocchips
+	cookbonus = 4
+	output = /obj/item/reagent_containers/food/snacks/cereal_box
+
 /datum/cookingrecipe/cereal_honey
 	item1 = /obj/item/reagent_containers/food/snacks/cereal_box
 	item2 = /obj/item/reagent_containers/food/snacks/ingredient/honey
 	cookbonus = 4
 	output = /obj/item/reagent_containers/food/snacks/cereal_box/honey
+
+/datum/cookingrecipe/cereal_tanhony
+	item1 = /obj/item/reagent_containers/food/snacks/cereal_box
+	item2 = /obj/item/reagent_containers/food/snacks/plant/banana
+	cookbonus = 4
+	output = /obj/item/reagent_containers/food/snacks/cereal_box/tanhony
+
+/datum/cookingrecipe/cereal_roach
+	item1 = /obj/item/reagent_containers/food/snacks/cereal_box
+	item2 = /obj/item/reagent_containers/food/snacks/candy/chocolate
+	cookbonus = 4
+	output = /obj/item/reagent_containers/food/snacks/cereal_box/roach
+
+/datum/cookingrecipe/cereal_syndie
+	item1 = /obj/item/reagent_containers/food/snacks/cereal_box
+	item2 = /obj/item/uplink_telecrystal
+	cookbonus = 4
+	output = /obj/item/reagent_containers/food/snacks/cereal_box/syndie
+
+/datum/cookingrecipe/cereal_cirrial
+	item1 = /obj/item/reagent_containers/food/snacks/cereal_box
+	item2 = /obj/item/organ/brain/flockdrone
+	cookbonus = 4
+	output = /obj/item/reagent_containers/food/snacks/cereal_box/cirrial
 
 /datum/cookingrecipe/granola_bar
 	item1 = /obj/item/reagent_containers/food/snacks/ingredient/honey
