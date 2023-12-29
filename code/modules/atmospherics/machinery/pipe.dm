@@ -312,10 +312,10 @@
 /obj/machinery/atmospherics/pipe/simple/attackby(var/obj/item/W, var/mob/user)
 	if(isweldingtool(W))
 		if(!ruptured)
-			boutput(user, "<span class='alert'>That isn't damaged!</span>")
+			boutput(user, SPAN_ALERT("That isn't damaged!"))
 			return
 		else if(destroyed)
-			boutput(user, "<span class='alert'>This needs more than just a welder. We need to make a new pipe!</span>")
+			boutput(user, SPAN_ALERT("This needs more than just a welder. We need to make a new pipe!"))
 			return
 
 		if(!W:try_weld(user, 0.8, noisy=2))
@@ -325,7 +325,7 @@
 
 		var/positions = src.get_welding_positions()
 		actions.start(new /datum/action/bar/private/welding(user, src, 2 SECONDS, /obj/machinery/atmospherics/pipe/simple/proc/repair_pipe, \
-				list(user), "<span class='notice'>[user] repairs the [src.name].</span>", positions[1], positions[2]),user)
+				list(user), SPAN_NOTICE("[user] repairs the [src.name]."), positions[1], positions[2]),user)
 
 	else if(destroyed && istype(W, /obj/item/rods))
 		var/duration = 15 SECONDS
@@ -589,7 +589,11 @@
 
 /obj/machinery/atmospherics/pipe/manifold
 	icon = 'icons/obj/atmospherics/pipes/manifold_pipe.dmi'
+#ifdef IN_MAP_EDITOR
+	icon_state = "manifold-map"
+#else
 	icon_state = "manifold"
+#endif
 	name = "pipe manifold"
 	desc = "A manifold composed of regular pipes"
 	level = UNDERFLOOR
@@ -605,10 +609,12 @@
 	..()
 	initialize_directions = (NORTH|SOUTH|EAST|WEST) ^ dir
 
-/obj/machinery/atmospherics/pipe/manifold/hide(var/i)
-	if(level == UNDERFLOOR && istype(loc, /turf/simulated))
-		invisibility = i ? INVIS_ALWAYS : INVIS_NONE
-	UpdateIcon()
+/obj/machinery/atmospherics/pipe/manifold/hide(var/intact)
+	var/hide_pipe = CHECKHIDEPIPE(src)
+	invisibility = hide_pipe ? INVIS_ALWAYS : INVIS_NONE
+	SET_PIPE_UNDERLAY(src.node1, turn(src.dir, 90), "short", issimplepipe(src.node1) ?  src.node1.color : null, hide_pipe)
+	SET_PIPE_UNDERLAY(src.node2, turn(src.dir, 180), "short", issimplepipe(src.node2) ?  src.node2.color : null, hide_pipe)
+	SET_PIPE_UNDERLAY(src.node3, turn(src.dir, -90), "short", issimplepipe(src.node3) ?  src.node3.color : null, hide_pipe)
 
 /obj/machinery/atmospherics/pipe/manifold/pipeline_expansion()
 	return list(node1, node2, node3)
@@ -616,13 +622,7 @@
 /obj/machinery/atmospherics/pipe/manifold/process()
 	..()
 
-	if(!node1)
-		parent.mingle_with_turf(loc, 70)
-
-	else if(!node2)
-		parent.mingle_with_turf(loc, 70)
-
-	else if(!node3)
+	if(!(src.node1 && src.node2 && src.node3))
 		parent.mingle_with_turf(loc, 70)
 
 /obj/machinery/atmospherics/pipe/manifold/disposing()
@@ -659,57 +659,28 @@
 	..()
 
 /obj/machinery/atmospherics/pipe/manifold/update_icon()
-	if(node1 && node2&& node3)
-		icon_state = "manifold"
-		alpha = invisibility ? 128 : 255
-
-	else
-		var/connected = 0
-		var/unconnected = 0
-		var/connect_directions = (NORTH|SOUTH|EAST|WEST)&(~dir)
-
-		if(node1)
-			connected |= get_dir(src, node1)
-		if(node2)
-			connected |= get_dir(src, node2)
-		if(node3)
-			connected |= get_dir(src, node3)
-
-		unconnected = (~connected)&(connect_directions)
-
-		icon_state = "manifold_[connected]_[unconnected]"
+	var/turf/T = get_turf(src)
+	src.hide(T.intact)
+	alpha = invisibility ? 128 : 255
 
 /obj/machinery/atmospherics/pipe/manifold/initialize()
-	var/connect_directions = (NORTH|SOUTH|EAST|WEST)&(~dir)
+	var/node1_connect = turn(src.dir, 90)
+	var/node2_connect = turn(src.dir, 180)
+	var/node3_connect = turn(src.dir, -90)
 
-	for(var/direction in cardinal)
-		if(direction&connect_directions)
-			for(var/obj/machinery/atmospherics/target in get_step(src,direction))
-				if(target.initialize_directions & get_dir(target,src))
-					node1 = target
-					break
-
-			connect_directions &= ~direction
+	for(var/obj/machinery/atmospherics/target in get_step(src,node1_connect))
+		if(target.initialize_directions & get_dir(target,src))
+			src.node1 = target
 			break
 
-	for(var/direction in cardinal)
-		if(direction&connect_directions)
-			for(var/obj/machinery/atmospherics/target in get_step(src,direction))
-				if(target.initialize_directions & get_dir(target,src))
-					node2 = target
-					break
-
-			connect_directions &= ~direction
+	for(var/obj/machinery/atmospherics/target in get_step(src,node2_connect))
+		if(target.initialize_directions & get_dir(target,src))
+			src.node2 = target
 			break
 
-	for(var/direction in cardinal)
-		if(direction&connect_directions)
-			for(var/obj/machinery/atmospherics/target in get_step(src,direction))
-				if(target.initialize_directions & get_dir(target,src))
-					node3 = target
-					break
-
-			connect_directions &= ~direction
+	for(var/obj/machinery/atmospherics/target in get_step(src,node3_connect))
+		if(target.initialize_directions & get_dir(target,src))
+			src.node3 = target
 			break
 
 	var/turf/T = src.loc			// hide if turf is not intact

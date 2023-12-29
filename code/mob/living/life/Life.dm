@@ -202,6 +202,8 @@
 	add_lifeprocess(/datum/lifeprocess/hivebot_statusupdate)
 	add_lifeprocess(/datum/lifeprocess/stuns_lying)
 	add_lifeprocess(/datum/lifeprocess/blindness)
+	add_lifeprocess(/datum/lifeprocess/hivebot_signal)
+
 
 /mob/living/silicon/robot/restore_life_processes()
 	..()
@@ -274,13 +276,6 @@
 					animate(src, transform = matrix(), time = 1)
 				last_no_gravity = src.no_gravity
 
-			// Zephyr-class interdictor: carbon mobs in range gain a buff to stamina recovery, which can accumulate to linger briefly
-			if (iscarbon(src))
-				for_by_tcl(IX, /obj/machinery/interdictor)
-					if (IX.expend_interdict(4,src,TRUE,ITDR_ZEPHYR))
-						src.changeStatus("zephyr_field", 3 SECONDS * life_mult)
-						break
-
 		clamp_values()
 
 		//Regular Trait updates
@@ -328,6 +323,16 @@
 	if (farty_party)
 		src.emote("fart")
 
+	if (length(src.juggling))
+		var/list/juggled_items = list()
+		for (var/obj/item/juggled in src.juggling)
+			juggled_items += juggled
+		if (length(juggled_items) > 1)
+			var/obj/item/item1 = pick(juggled_items)
+			juggled_items -= item1
+			var/obj/item/item2 = pick(juggled_items)
+			item2.Attackby(item1, src, silent = TRUE)
+
 	//Attaching a limb that didn't originally belong to you can do stuff
 	if(!isdead(src) && prob(2) && src.limbs)
 		if(src.limbs.l_arm && istype(src.limbs.l_arm, /obj/item/parts/human_parts/arm/))
@@ -354,6 +359,9 @@
 
 		if (prob(1) && prob(5))
 			src.handle_random_emotes()
+
+		if (src.organHolder?.chest?.op_stage > 0 && !src.chest_cavity_clamped && prob(10)) //Going around with a gaping unsutured wound is a bad idea
+			take_bleeding_damage(src, null, rand(5, 10))
 
 	src.handle_pathogens()
 
@@ -470,7 +478,7 @@
 
 		if (prob(30))
 			var/idle_message = get_cube_idle()
-			src.visible_message("<span class='alert'><b>[src] [idle_message]!</b></span>")
+			src.visible_message(SPAN_ALERT("<b>[src] [idle_message]!</b>"))
 
 		if (life_timer-- > 0)
 			return 0
@@ -494,7 +502,7 @@
 				for (var/atom/A as anything in src.contents)
 					if (A.event_handler_flags & HANDLE_STICKER)
 						if (A:active)
-							src.visible_message("<span class='alert'><b>[A]</b> is burnt to a crisp and destroyed!</span>")
+							src.visible_message(SPAN_ALERT("<b>[A]</b> is burnt to a crisp and destroyed!"))
 							qdel(A)
 
 			if (isturf(src.loc))
@@ -502,8 +510,10 @@
 				location.hotspot_expose(T0C + 300, 400)
 
 			for (var/atom/A in src.contents)
-				if (A.material)
-					A.material.triggerTemp(A, T0C + 900)
+				A.material_trigger_on_temp(T0C + 900)
+
+			for (var/atom/equipped_stuff in src.equipped())
+				equipped_stuff.material_trigger_on_temp(T0C + 900)
 
 			if(src.traitHolder && src.traitHolder.hasTrait("burning"))
 				if(prob(50))
@@ -514,11 +524,11 @@
 			for (var/mob/living/carbon/C in view(6,get_turf(src)))
 				if (C == src || !C.client)
 					continue
-				boutput(C, "<span class='alert'>[stinkString()]</span>")
+				boutput(C, SPAN_ALERT("[stinkString()]"))
 				if (prob(30))
 					C.vomit()
 					C.changeStatus("stunned", 2 SECONDS)
-					boutput(C, "<span class='alert'>[stinkString()]</span>")
+					boutput(C, SPAN_ALERT("[stinkString()]"))
 
 	proc/update_sight()
 		var/datum/lifeprocess/L = lifeprocesses?[/datum/lifeprocess/sight]

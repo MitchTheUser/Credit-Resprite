@@ -23,6 +23,8 @@
 
 #elif defined(MAP_OVERRIDE_PAMGOC)
 
+#define REVERSED_MAP
+
 //#elif defined(MAP_OVERRIDE_WRESTLEMAP)
 
 // rotation
@@ -65,9 +67,6 @@
 #elif defined(MAP_OVERRIDE_MUSHROOM)
 
 #elif defined(MAP_OVERRIDE_TRUNKMAP)
-
-#elif defined(MAP_OVERRIDE_CHIRON)
-#define REVERSED_MAP
 
 /*#elif defined(MAP_OVERRIDE_DENSITY)
 

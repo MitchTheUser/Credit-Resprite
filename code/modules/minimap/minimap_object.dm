@@ -171,6 +171,17 @@
 			STOP_TRACKING
 			. = ..()
 
+	both_teams
+		map_type = MAP_POD_WARS_NANOTRASEN | MAP_POD_WARS_SYNDICATE
+
+		New()
+			. = ..()
+			START_TRACKING
+
+		disposing()
+			STOP_TRACKING
+			. = ..()
+
 /obj/minimap_controller
 	name = "Map Controller"
 	layer = TURF_LAYER
@@ -221,6 +232,7 @@
 			src.mouse_opacity = 2
 
 	MouseWheel(dx, dy, loc, ctrl, params)
+		. = TRUE
 		var/list/param_list = params2list(params)
 		var/datum/minimap/z_level/minimap = src.displayed_minimap
 		var/datum/minimap/z_level/controlled_minimap = src.controlled_minimap.map
@@ -429,8 +441,18 @@ ABSTRACT_TYPE(/obj/machinery/computer/pod_wars_minimap_controller)
 					src.minimap_controller = new(minimap)
 					src.minimap_ui = new(src, "synd_debris_minimap", src.minimap_controller, "Debris Field Map Controller", "syndicate")
 
+			if (TEAM_NEUTRAL)
+				for_by_tcl(map, /obj/minimap/map_computer/pod_wars/both_teams)
+					minimap = map
+
+				if (minimap)
+					src.minimap_controller = new(minimap)
+					src.minimap_ui = new(src, "neutral_debris_minimap", src.minimap_controller, "Debris Field Map Controller", "retro-dark")
 	nanotrasen
 		team_num = TEAM_NANOTRASEN
 
 	syndicate
 		team_num = TEAM_SYNDICATE
+
+	neutral
+		team_num = TEAM_NEUTRAL
