@@ -1907,7 +1907,6 @@ ABSTRACT_TYPE(/datum/cookingrecipe/mixer)
 	cookbonus = 8
 	output = /obj/item/reagent_containers/food/snacks/meatloaf
 
-<<<<<<< HEAD
 /datum/cookingrecipe/cereal_box
 	item1 = /obj/item/reagent_containers/food/snacks/ingredient/dough_s
 	item2 = /obj/item/reagent_containers/food/snacks/condiment/chocchips
@@ -1915,15 +1914,11 @@ ABSTRACT_TYPE(/datum/cookingrecipe/mixer)
 	output = /obj/item/reagent_containers/food/snacks/cereal_box
 
 /datum/cookingrecipe/cereal_honey
-=======
-/datum/cookingrecipe/oven/cereal_honey
->>>>>>> 0995e8fe3b4cd7167c36e19cf3e328f29d63ee02
 	item1 = /obj/item/reagent_containers/food/snacks/cereal_box
 	item2 = /obj/item/reagent_containers/food/snacks/ingredient/honey
 	cookbonus = 4
 	output = /obj/item/reagent_containers/food/snacks/cereal_box/honey
 
-<<<<<<< HEAD
 /datum/cookingrecipe/cereal_tanhony
 	item1 = /obj/item/reagent_containers/food/snacks/cereal_box
 	item2 = /obj/item/reagent_containers/food/snacks/plant/banana
@@ -1949,9 +1944,6 @@ ABSTRACT_TYPE(/datum/cookingrecipe/mixer)
 	output = /obj/item/reagent_containers/food/snacks/cereal_box/cirrial
 
 /datum/cookingrecipe/granola_bar
-=======
-/datum/cookingrecipe/oven/granola_bar
->>>>>>> 0995e8fe3b4cd7167c36e19cf3e328f29d63ee02
 	item1 = /obj/item/reagent_containers/food/snacks/ingredient/honey
 	item2 = /obj/item/reagent_containers/food/snacks/ingredient/oatmeal
 	cookbonus = 6
