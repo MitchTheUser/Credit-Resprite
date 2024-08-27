@@ -11,6 +11,7 @@ VUVUZELA
 	name = "Banana Peel"
 	desc = "A peel from a banana."
 	icon = 'icons/obj/foodNdrink/food_produce.dmi'
+	inhand_image_icon = 'icons/mob/inhand/hand_food.dmi'
 	icon_state = "banana-peel"
 	item_state = "banana-peel"
 	w_class = W_CLASS_TINY
