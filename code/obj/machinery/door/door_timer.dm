@@ -385,3 +385,23 @@
 			SPAWN(5 SECONDS)
 				icon_state = "doortimer0"
 			icon_state = "doortimer2"
+
+/obj/machinery/door_timer/north
+	name = "N Door Timer"
+	dir = NORTH
+	pixel_y = 24
+
+/obj/machinery/door_timer/east
+	name = "E Door Timer"
+	dir = EAST
+	pixel_x = 22
+
+/obj/machinery/door_timer/south
+	name = "S Door Timer"
+	dir = SOUTH
+	pixel_y = -19
+
+/obj/machinery/door_timer/west
+	name = "W Door Timer"
+	dir = WEST
+	pixel_x = -22

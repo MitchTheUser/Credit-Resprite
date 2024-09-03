@@ -1177,3 +1177,23 @@ ABSTRACT_TYPE(/obj/machinery/activation_button)
 			pixel_y = -19
 		west
 			pixel_x = -22
+
+/obj/machinery/door_control/north
+	name = "N Remote Door Control"
+	dir = NORTH
+	pixel_y = 24
+
+/obj/machinery/door_control/east
+	name = "E Remote Door Control"
+	dir = EAST
+	pixel_x = 24
+
+/obj/machinery/door_control/south
+	name = "S Remote Door Control"
+	dir = SOUTH
+	pixel_y = -24
+
+/obj/machinery/door_control/west
+	name = "W Remote Door Control"
+	dir = WEST
+	pixel_x = -24
