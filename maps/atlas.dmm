@@ -2841,7 +2841,7 @@
 	dir = 4;
 	pixel_x = 15
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/red,
 /area/station/security/brig/genpop)
 "alq" = (
 /obj/table/wood/auto,
@@ -17703,15 +17703,16 @@
 /area/station/engine/engineering)
 "nzG" = (
 /obj/machinery/light_switch/auto{
-	pixel_x = 0;
-	pixel_y = 0
+	pixel_x = -24;
+	pixel_y = 5;
+	dir = 8
 	},
 /obj/submachine/ice_cream_dispenser,
 /obj/machinery/door_control{
 	id = "creamery_shutter";
 	name = "Creamery Shutter Control";
 	pixel_x = -24;
-	pixel_y = -10;
+	pixel_y = -6;
 	dir = 8
 	},
 /turf/simulated/floor/black,
