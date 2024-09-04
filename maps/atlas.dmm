@@ -1071,12 +1071,6 @@
 /obj/item/tank/jetpack/micro,
 /turf/simulated/floor/yellow/side,
 /area/station/mining/staff_room)
-"adR" = (
-/obj/stool/chair/blue{
-	dir = 4
-	},
-/turf/simulated/floor/white,
-/area/station/medical/medbay)
 "adS" = (
 /obj/decal/tile_edge/stripe/big{
 	dir = 5
@@ -1355,8 +1349,7 @@
 /obj/machinery/door_control{
 	id = "vent";
 	name = "Combustion Chamber Vent Control";
-	pixel_x = -25;
-	dir = 8
+	pixel_x = -25
 	},
 /turf/simulated/floor/caution/northsouth,
 /area/station/engine/core)
@@ -1553,13 +1546,9 @@
 /obj/item/ghostboard,
 /obj/machinery/crema_switch{
 	pixel_x = 5;
-	pixel_y = 24
+	pixel_y = 28
 	},
 /obj/machinery/vending/chapel,
-/obj/machinery/light_switch/auto{
-	pixel_x = -5;
-	pixel_y = 24
-	},
 /turf/simulated/floor/carpet/grime,
 /area/station/chapel/office)
 "afK" = (
@@ -2186,9 +2175,7 @@
 /obj/machinery/door_control{
 	id = "cargo_shutter";
 	name = "Cargo Shutter Control";
-	pixel_x = 24;
-	dir = 4;
-	pixel_y = 0
+	pixel_x = 25
 	},
 /obj/table/auto,
 /obj/machinery/networked/printer{
@@ -2841,7 +2828,7 @@
 	dir = 4;
 	pixel_x = 15
 	},
-/turf/simulated/floor/red,
+/turf/simulated/floor/plating,
 /area/station/security/brig/genpop)
 "alq" = (
 /obj/table/wood/auto,
@@ -3566,10 +3553,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/door_timer/genpop/new_walls/north{
-	pixel_x = 0;
-	pixel_y = -22
-	},
+/obj/machinery/door_timer/genpop/new_walls/south,
 /turf/simulated/floor/red/side{
 	dir = 6
 	},
@@ -4441,8 +4425,14 @@
 	name = "AI Core Shield";
 	opacity = 0
 	},
+/obj/cable{
+	icon_state = "0-2"
+	},
+/obj/cable{
+	icon_state = "0-4"
+	},
 /obj/mapping_helper/wingrille_spawn/auto/reinforced,
-/turf/simulated/floor/circuit,
+/turf/simulated/floor/circuit/off,
 /area/station/turret_protected/ai)
 "asx" = (
 /turf/simulated/floor/blueblack{
@@ -4574,8 +4564,17 @@
 	name = "AI Core Shield";
 	opacity = 0
 	},
-/obj/mapping_helper/wingrille_spawn/auto/reinforced,
-/turf/simulated/floor/circuit,
+/obj/machinery/door/airlock/pyro/glass/command{
+	name = "AI Core"
+	},
+/obj/mapping_helper/access/ai_upload,
+/obj/cable{
+	icon_state = "0-8"
+	},
+/obj/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/circuit/off,
 /area/station/turret_protected/ai)
 "asW" = (
 /obj/cable{
@@ -4621,8 +4620,14 @@
 	name = "AI Core Shield";
 	opacity = 0
 	},
+/obj/cable{
+	icon_state = "0-8"
+	},
+/obj/cable{
+	icon_state = "0-2"
+	},
 /obj/mapping_helper/wingrille_spawn/auto/reinforced,
-/turf/simulated/floor/circuit,
+/turf/simulated/floor/circuit/off,
 /area/station/turret_protected/ai)
 "atg" = (
 /obj/lattice{
@@ -5159,8 +5164,12 @@
 	name = "AI Core Shield";
 	opacity = 0
 	},
+/obj/cable{
+	icon_state = "0-2"
+	},
+/obj/cable,
 /obj/mapping_helper/wingrille_spawn/auto/reinforced,
-/turf/simulated/floor/circuit,
+/turf/simulated/floor/circuit/off,
 /area/station/turret_protected/ai)
 "auQ" = (
 /obj/machinery/camera{
@@ -5354,8 +5363,12 @@
 	name = "AI Core Shield";
 	opacity = 0
 	},
+/obj/cable,
+/obj/cable{
+	icon_state = "0-4"
+	},
 /obj/mapping_helper/wingrille_spawn/auto/reinforced,
-/turf/simulated/floor/circuit,
+/turf/simulated/floor/circuit/off,
 /area/station/turret_protected/ai)
 "avu" = (
 /obj/mapping_helper/wingrille_spawn/auto/reinforced/crystal,
@@ -5370,8 +5383,12 @@
 	name = "AI Core Shield";
 	opacity = 0
 	},
+/obj/cable{
+	icon_state = "0-8"
+	},
+/obj/cable,
 /obj/mapping_helper/wingrille_spawn/auto/reinforced,
-/turf/simulated/floor/circuit,
+/turf/simulated/floor/circuit/off,
 /area/station/turret_protected/ai)
 "avw" = (
 /obj/machinery/computer/genetics{
@@ -5476,7 +5493,8 @@
 	dir = 6;
 	name = "autoname - SS13";
 	pixel_y = 20;
-	tag = ""
+	tag = "";
+	pixel_x = -18
 	},
 /turf/simulated/floor/blueblack{
 	dir = 1
@@ -5588,10 +5606,7 @@
 /turf/simulated/floor/darkblue,
 /area/station/medical/morgue)
 "awi" = (
-/obj/item/device/radio/intercom/bridge{
-	pixel_x = -6;
-	pixel_y = 22
-	},
+/obj/item/device/radio/intercom/bridge,
 /turf/simulated/floor/stairs{
 	dir = 8
 	},
@@ -5674,8 +5689,7 @@
 	id = "engine_room";
 	name = "Observation Shutters";
 	pixel_x = -24;
-	pixel_y = 9;
-	dir = 8
+	pixel_y = -13
 	},
 /obj/machinery/light{
 	dir = 8;
@@ -5685,9 +5699,7 @@
 /obj/item/storage/firstaid/fire,
 /obj/item/extinguisher,
 /obj/item/device/radio/intercom/engineering{
-	dir = 4;
-	pixel_x = -19;
-	pixel_y = -6
+	dir = 4
 	},
 /obj/item/device/transfer_valve{
 	pixel_x = 10;
@@ -8649,9 +8661,7 @@
 /obj/machinery/door_control{
 	id = "tele";
 	name = "Teleporter Blast Door Control";
-	pixel_x = -23;
-	pixel_y = 0;
-	dir = 8
+	pixel_x = -25
 	},
 /turf/simulated/floor/purplewhite{
 	dir = 10
@@ -8879,14 +8889,6 @@
 /obj/landmark/gps_waypoint,
 /turf/simulated/floor/dirt,
 /area/station/ranch)
-"aIg" = (
-/obj/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/purplewhite{
-	dir = 8
-	},
-/area/station/science/teleporter)
 "aIl" = (
 /turf/simulated/floor/purple,
 /area/station/janitor/office)
@@ -10681,11 +10683,18 @@
 	name = "AI Core Shield";
 	opacity = 0
 	},
-/obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/cable{
-	icon_state = "4-8"
+	icon_state = "0-4"
 	},
-/turf/simulated/floor/circuit,
+/obj/cable{
+	icon_state = "0-8"
+	},
+/obj/cable{
+	icon_state = "0-2"
+	},
+/obj/cable,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
+/turf/simulated/floor/circuit/off,
 /area/station/turret_protected/ai)
 "aPb" = (
 /obj/machinery/door/airlock/pyro/alt{
@@ -10972,9 +10981,8 @@
 	id = "medbay_hall";
 	name = "Medbay Door Control";
 	pixel_x = 24;
-	pixel_y = -2;
-	timer = 100;
-	dir = 4
+	pixel_y = -8;
+	timer = 100
 	},
 /obj/cable{
 	icon_state = "1-2"
@@ -13231,13 +13239,6 @@
 "aYR" = (
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/storage/tech)
-"aYV" = (
-/obj/machinery/atmospherics/binary/valve{
-	dir = 4;
-	name = "hot loop purge valve"
-	},
-/turf/simulated/wall/auto/reinforced/supernorn,
-/area/station/maintenance/southwest)
 "aYY" = (
 /obj/table/auto,
 /obj/machinery/phone,
@@ -13608,6 +13609,19 @@
 	},
 /turf/simulated/floor/plating/random,
 /area/station/maintenance/southwest)
+"bhv" = (
+/obj/machinery/power/apc/autoname_east,
+/obj/cable{
+	icon_state = "0-2"
+	},
+/obj/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/binary/valve{
+	name = "hot inlet valve"
+	},
+/turf/simulated/floor/engine,
+/area/station/engine/hotloop)
 "bhA" = (
 /obj/cable{
 	icon_state = "1-8"
@@ -13707,13 +13721,6 @@
 	dir = 8
 	},
 /area/station/quartermaster/office)
-"bxK" = (
-/obj/machinery/atmospherics/binary/valve{
-	dir = 4;
-	name = "cold loop valve"
-	},
-/turf/simulated/floor/engine,
-/area/station/engine/core)
 "bAx" = (
 /obj/cable/orange{
 	icon_state = "1-8"
@@ -14011,6 +14018,37 @@
 	},
 /turf/simulated/floor/caution/west,
 /area/station/engine/core)
+"cvx" = (
+/obj/table/auto,
+/obj/machinery/door_control{
+	id = "engine_room";
+	name = "Observation Shutters";
+	pixel_x = -24;
+	pixel_y = 9;
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8;
+	light_type = /obj/item/light/tube/yellowish
+	},
+/obj/item/clothing/gloves/yellow,
+/obj/item/storage/firstaid/fire,
+/obj/item/extinguisher,
+/obj/item/device/radio/intercom/engineering{
+	dir = 4;
+	pixel_x = -19;
+	pixel_y = -6
+	},
+/obj/item/device/transfer_valve{
+	pixel_x = 10;
+	pixel_y = 8
+	},
+/obj/item/device/transfer_valve{
+	pixel_x = -8;
+	pixel_y = 7
+	},
+/turf/simulated/floor/orangeblack,
+/area/station/engine/engineering)
 "cwL" = (
 /obj/cable{
 	icon_state = "4-8"
@@ -14073,6 +14111,26 @@
 	dir = 1
 	},
 /area/station/bridge/customs)
+"cDH" = (
+/obj/machinery/door_control{
+	id = "cargo_shutter";
+	name = "Cargo Shutter Control";
+	pixel_x = 24;
+	dir = 4;
+	pixel_y = 0
+	},
+/obj/table/auto,
+/obj/machinery/networked/printer{
+	name = "Printer - Quartermaster's Office";
+	pixel_y = 5;
+	print_id = "QuartermastersOffice"
+	},
+/obj/machinery/power/data_terminal,
+/obj/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/yellow,
+/area/station/quartermaster/office)
 "cFA" = (
 /obj/machinery/computer/announcement/clown{
 	dir = 4
@@ -14236,6 +14294,22 @@
 	},
 /turf/simulated/grimycarpet,
 /area/station/crew_quarters/catering)
+"dcl" = (
+/obj/machinery/door/poddoor/pyro/shutters{
+	density = 0;
+	dir = 6;
+	icon_state = "pdoor0";
+	id = "ai_core";
+	name = "AI Core Shield";
+	opacity = 0
+	},
+/obj/cable{
+	icon_state = "0-8"
+	},
+/obj/cable,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
+/turf/simulated/floor/circuit/off,
+/area/station/turret_protected/ai)
 "dcx" = (
 /obj/cable{
 	icon_state = "1-8"
@@ -14271,10 +14345,6 @@
 /obj/disposalpipe/segment,
 /turf/simulated/floor,
 /area/station/hallway/primary/south)
-"diS" = (
-/obj/machinery/atmospherics/binary/valve,
-/turf/simulated/floor/engine,
-/area/station/engine/coldloop)
 "djg" = (
 /obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /obj/window_blinds/cog2/left,
@@ -14457,6 +14527,16 @@
 	},
 /turf/simulated/floor/plating/random,
 /area/station/maintenance/southwest)
+"dIO" = (
+/obj/machinery/door_control{
+	id = "burn_chamber";
+	name = "Combustion Chamber Heat Shield Control";
+	pixel_x = -25;
+	pixel_y = 0;
+	dir = 8
+	},
+/turf/simulated/floor/engine,
+/area/station/engine/core)
 "dKA" = (
 /obj/machinery/chem_dispenser/chef,
 /turf/simulated/floor/white/corner{
@@ -14523,11 +14603,6 @@
 	},
 /turf/simulated/floor/black,
 /area/station/crew_quarters/bar)
-"dQd" = (
-/obj/machinery/atmospherics/binary/valve,
-/obj/submachine/cargopad/engineering,
-/turf/simulated/floor/caution/west,
-/area/station/engine/core)
 "dRf" = (
 /obj/cable{
 	icon_state = "1-2"
@@ -14603,6 +14678,12 @@
 	},
 /turf/simulated/floor/airless/plating/catwalk,
 /area/station/solar/north)
+"eih" = (
+/obj/decal/mule/dropoff,
+/turf/simulated/floor/yellow/side{
+	dir = 9
+	},
+/area/station/mining/staff_room)
 "ekl" = (
 /obj/cable/orange{
 	icon_state = "1-2"
@@ -14782,6 +14863,13 @@
 	dir = 4
 	},
 /area/station/security/main)
+"eFo" = (
+/obj/machinery/atmospherics/binary/valve{
+	name = "cold outlet valve";
+	dir = 8
+	},
+/turf/simulated/floor/engine,
+/area/station/engine/core)
 "eFq" = (
 /obj/machinery/door/airlock/pyro/maintenance/alt{
 	dir = 4
@@ -14957,17 +15045,6 @@
 	},
 /turf/simulated/floor,
 /area/station/hallway/primary/east)
-"fcV" = (
-/obj/machinery/power/apc/autoname_east,
-/obj/machinery/atmospherics/binary/valve,
-/obj/cable{
-	icon_state = "0-2"
-	},
-/obj/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/engine,
-/area/station/engine/hotloop)
 "fgR" = (
 /obj/lattice{
 	dir = 4;
@@ -14980,6 +15057,16 @@
 	},
 /turf/simulated/floor/airless/plating/catwalk/auto,
 /area/space)
+"fij" = (
+/obj/machinery/door_control{
+	id = "chamber_2";
+	name = "Vent Control";
+	pixel_y = -21;
+	pixel_x = 0;
+	dir = 1
+	},
+/turf/simulated/floor/caution/westeast,
+/area/station/science/lab)
 "fim" = (
 /turf/simulated/floor/purplewhite{
 	dir = 1
@@ -15072,13 +15159,6 @@
 	},
 /turf/simulated/floor/twotone/black,
 /area/station/crew_quarters/cafeteria)
-"fyE" = (
-/obj/machinery/atmospherics/binary/valve{
-	dir = 4;
-	name = "combustion chamber inlet valve"
-	},
-/turf/simulated/floor/caution/northsouth,
-/area/station/engine/core)
 "fyL" = (
 /obj/machinery/computer/ordercomp{
 	dir = 8
@@ -15156,12 +15236,6 @@
 	dir = 1
 	},
 /area/station/security/main)
-"fHe" = (
-/obj/machinery/atmospherics/binary/valve{
-	dir = 4
-	},
-/turf/simulated/floor/engine,
-/area/station/engine/core)
 "fHo" = (
 /obj/decal/tile_edge/line/blue{
 	dir = 8;
@@ -15341,6 +15415,21 @@
 /obj/mapping_helper/airlock/aiDisabler,
 /turf/simulated/floor/black,
 /area/station/ai_monitored/armory)
+"gla" = (
+/obj/machinery/door/airlock/pyro/glass/security{
+	dir = 4
+	},
+/obj/mapping_helper/access/security,
+/obj/mapping_helper/firedoor_spawn,
+/obj/disposalpipe/segment/brig{
+	dir = 4
+	},
+/obj/machinery/secscanner{
+	dir = 4;
+	pixel_x = 15
+	},
+/turf/simulated/floor/red,
+/area/station/security/brig/genpop)
 "gmG" = (
 /obj/cable{
 	icon_state = "0-4"
@@ -15521,17 +15610,6 @@
 	},
 /turf/simulated/floor,
 /area/station/hallway/primary/south)
-"gZH" = (
-/obj/table/auto,
-/obj/item/reagent_containers/food/drinks/drinkingglass/icing,
-/obj/item/kitchen/rollingpin{
-	pixel_y = 5;
-	pixel_x = -5
-	},
-/turf/simulated/floor/white/side{
-	dir = 4
-	},
-/area/station/crew_quarters/kitchen)
 "hay" = (
 /obj/machinery/communications_dish,
 /obj/machinery/power/data_terminal,
@@ -15560,6 +15638,17 @@
 	},
 /turf/simulated/floor/grass/random,
 /area/station/hydroponics/bay)
+"hgE" = (
+/obj/machinery/power/apc/autoname_east,
+/obj/cable,
+/obj/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/binary/valve{
+	name = "cold inlet valve"
+	},
+/turf/simulated/floor/engine,
+/area/station/engine/coldloop)
 "hjc" = (
 /obj/item/storage/wall/emergency{
 	dir = 8
@@ -15664,9 +15753,7 @@
 /obj/machinery/door_control{
 	id = "chamber_1";
 	name = "Vent Control";
-	pixel_y = -21;
-	pixel_x = 0;
-	dir = 1
+	pixel_y = -24
 	},
 /turf/simulated/floor/caution/westeast,
 /area/station/science/lab)
@@ -15678,13 +15765,18 @@
 	id = "crusher";
 	name = "Crusher Door Control";
 	pixel_x = 24;
-	pixel_y = -2;
-	dir = 4
+	pixel_y = -8
 	},
 /turf/simulated/floor/purple/side{
 	dir = 5
 	},
 /area/station/janitor/office)
+"hvC" = (
+/obj/machinery/atmospherics/binary/valve{
+	name = "hot inlet valve"
+	},
+/turf/simulated/floor/engine,
+/area/station/engine/hotloop)
 "hwt" = (
 /obj/cable{
 	icon_state = "1-2"
@@ -15701,6 +15793,22 @@
 	dir = 8
 	},
 /area/station/crew_quarters/kitchen)
+"hyh" = (
+/obj/machinery/door/poddoor/pyro/shutters{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "ai_core";
+	name = "AI Core Shield";
+	opacity = 0
+	},
+/obj/cable{
+	icon_state = "0-2"
+	},
+/obj/cable,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
+/turf/simulated/floor/circuit/off,
+/area/station/turret_protected/ai)
 "hyA" = (
 /obj/cable{
 	icon_state = "1-2"
@@ -15785,6 +15893,13 @@
 	},
 /turf/simulated/floor/black,
 /area/station/turret_protected/ai)
+"hMI" = (
+/obj/stool/chair/blue{
+	dir = 4
+	},
+/obj/landmark/start/job/medical_assistant,
+/turf/simulated/floor/white,
+/area/station/medical/medbay)
 "hPY" = (
 /obj/decal/tile_edge/stripe/big{
 	dir = 9
@@ -15796,9 +15911,7 @@
 	desc = "A remote control switch for a door. Wow, that's a mouthful.";
 	id = "art";
 	name = "Emergency Artfiact Flusher Shutter Control";
-	pixel_y = -20;
-	pixel_x = 0;
-	dir = 1
+	pixel_y = -20
 	},
 /obj/artifact_spawner,
 /turf/simulated/floor/circuit/purple,
@@ -16029,10 +16142,8 @@
 	dir = 4;
 	pixel_x = -15
 	},
-/obj/machinery/door_control/bolter/new_walls/north{
-	id = "quarters_cap";
-	pixel_x = 0;
-	pixel_y = -21
+/obj/machinery/door_control/bolter/new_walls/south{
+	id = "quarters_cap"
 	},
 /turf/simulated/floor/carpet/arcade,
 /area/station/bridge/captain)
@@ -16044,10 +16155,8 @@
 /obj/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/door_control/bolter/new_walls/south{
-	id = "quarters_hop";
-	pixel_x = 0;
-	pixel_y = 26
+/obj/machinery/door_control/bolter/new_walls/north{
+	id = "quarters_hop"
 	},
 /turf/simulated/floor/wood/two,
 /area/station/crew_quarters/heads)
@@ -16223,6 +16332,48 @@
 	dir = 1
 	},
 /area/station/chapel/sanctuary)
+"jpS" = (
+/obj/table/auto,
+/obj/machinery/door_control{
+	id = "kitchen_shutter";
+	name = "Kitchen Shutter Control";
+	pixel_x = -24;
+	pixel_y = -9;
+	dir = 8
+	},
+/obj/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/phone/wall{
+	pixel_x = -24;
+	pixel_y = 11
+	},
+/obj/machinery/glass_recycler/bar{
+	pixel_y = 9;
+	pixel_x = -1;
+	g_amt = 10
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/machinery/door_control{
+	id = "kitchen_shutter";
+	name = "Kitchen Shutter Control";
+	pixel_x = -24;
+	pixel_y = -6
+	},
+/obj/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/phone/wall{
+	pixel_x = -24;
+	pixel_y = 11
+	},
+/obj/machinery/computer/announcement/station/catering,
+/turf/simulated/floor/auto/grass,
+/area/station/crew_quarters/kitchen)
 "jst" = (
 /obj/cable{
 	icon_state = "1-8"
@@ -16282,6 +16433,26 @@
 	dir = 8
 	},
 /area/station/hallway/primary/north)
+"jFP" = (
+/obj/machinery/door/poddoor/pyro/shutters{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "ai_core";
+	name = "AI Core Shield";
+	opacity = 0
+	},
+/obj/machinery/door/airlock/pyro/glass/command{
+	name = "AI Core"
+	},
+/obj/mapping_helper/access/ai_upload,
+/obj/cable{
+	icon_state = "0-8"
+	},
+/obj/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/circuit/off,
+/area/station/turret_protected/ai)
 "jGe" = (
 /obj/cable{
 	icon_state = "4-8"
@@ -16385,8 +16556,7 @@
 /obj/machinery/door_control{
 	name = "Janitor's Office Door Control";
 	pixel_x = -24;
-	id = "janidoor";
-	dir = 8
+	id = "janidoor"
 	},
 /obj/reagent_dispensers/watertank,
 /obj/decal/stripe_caution,
@@ -16405,6 +16575,28 @@
 	},
 /turf/simulated/floor/plating/random,
 /area/station/maintenance/southwest)
+"jUu" = (
+/obj/machinery/door/poddoor/pyro/shutters{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "ai_core";
+	name = "AI Core Shield";
+	opacity = 0
+	},
+/obj/cable{
+	icon_state = "0-4"
+	},
+/obj/cable{
+	icon_state = "0-8"
+	},
+/obj/cable{
+	icon_state = "0-2"
+	},
+/obj/cable,
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
+/turf/simulated/floor/circuit/off,
+/area/station/turret_protected/ai)
 "jUF" = (
 /obj/machinery/firealarm/north,
 /obj/item/reagent_containers/syringe/haloperidol,
@@ -16413,13 +16605,6 @@
 	dir = 1
 	},
 /area/station/medical/medbay)
-"jUG" = (
-/obj/machinery/atmospherics/binary/valve{
-	dir = 4;
-	name = "cold loop purge valve"
-	},
-/turf/simulated/wall/auto/reinforced/supernorn,
-/area/station/maintenance/southeast)
 "jWt" = (
 /obj/machinery/power/apc/autoname_north,
 /obj/cable{
@@ -16484,6 +16669,24 @@
 	},
 /turf/simulated/floor,
 /area/station/hallway/primary/west)
+"kdf" = (
+/obj/cable{
+	icon_state = "2-4"
+	},
+/obj/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door_control{
+	id = "lockdown";
+	name = "Bridge Lockdown";
+	pixel_x = -23;
+	pixel_y = 25
+	},
+/turf/simulated/floor/carpet{
+	dir = 8;
+	icon_state = "fblue2"
+	},
+/area/station/bridge)
 "kdi" = (
 /obj/machinery/door/airlock/pyro/classic{
 	dir = 4
@@ -16578,6 +16781,13 @@
 	},
 /turf/simulated/grimycarpet,
 /area/station/crew_quarters/catering)
+"kmL" = (
+/obj/machinery/atmospherics/binary/valve{
+	dir = 4;
+	name = "hot outlet valve"
+	},
+/turf/simulated/floor/engine,
+/area/station/engine/core)
 "koV" = (
 /obj/machinery/vending/standard/toxins,
 /turf/simulated/floor/purplewhite{
@@ -16719,9 +16929,7 @@
 /obj/machinery/door_control{
 	id = "burn_chamber";
 	name = "Combustion Chamber Heat Shield Control";
-	pixel_x = -25;
-	pixel_y = 0;
-	dir = 8
+	pixel_x = -25
 	},
 /turf/simulated/floor/engine,
 /area/station/engine/core)
@@ -16791,6 +16999,15 @@
 /obj/machinery/interdictor/unlocked,
 /turf/simulated/floor/grass/leafy,
 /area/station/ranch)
+"kTQ" = (
+/obj/cable{
+	icon_state = "1-2"
+	},
+/obj/landmark/start/job/research_assistant,
+/turf/simulated/floor/purplewhite{
+	dir = 8
+	},
+/area/station/science/teleporter)
 "kUi" = (
 /obj/cable{
 	icon_state = "4-8"
@@ -16833,6 +17050,13 @@
 	},
 /turf/simulated/floor/black,
 /area/station/medical/robotics)
+"kYF" = (
+/obj/machinery/atmospherics/binary/valve{
+	dir = 4;
+	name = "combustion chamber fuel valve"
+	},
+/turf/simulated/floor/caution/northsouth,
+/area/station/engine/core)
 "kZr" = (
 /obj/decal/tile_edge/stripe/big{
 	dir = 4
@@ -16844,6 +17068,24 @@
 /obj/blind_switch/area/south,
 /turf/simulated/floor/black,
 /area/station/medical/robotics)
+"kZC" = (
+/obj/machinery/door/poddoor/pyro/shutters{
+	density = 0;
+	dir = 5;
+	icon_state = "pdoor0";
+	id = "ai_core";
+	name = "AI Core Shield";
+	opacity = 0
+	},
+/obj/cable{
+	icon_state = "0-8"
+	},
+/obj/cable{
+	icon_state = "0-2"
+	},
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
+/turf/simulated/floor/circuit/off,
+/area/station/turret_protected/ai)
 "laS" = (
 /obj/table/reinforced/bar/auto,
 /obj/decal/tile_edge/line/black{
@@ -16953,14 +17195,20 @@
 /obj/machinery/door_control{
 	id = "lockdown";
 	name = "Bridge Lockdown";
-	pixel_x = -23;
-	pixel_y = 25
+	pixel_x = -24;
+	pixel_y = 24
 	},
 /turf/simulated/floor/carpet{
 	dir = 8;
 	icon_state = "fblue2"
 	},
 /area/station/bridge)
+"lpk" = (
+/obj/machinery/atmospherics/binary/valve{
+	name = "combustion chamber bypass valve"
+	},
+/turf/simulated/floor/engine,
+/area/station/engine/core)
 "lqA" = (
 /obj/table/auto,
 /obj/item/boardgame/chess,
@@ -17109,6 +17357,24 @@
 	},
 /turf/simulated/wall/auto/supernorn,
 /area/station/quartermaster/office)
+"lUI" = (
+/obj/decal/tile_edge/stripe/big{
+	dir = 9
+	},
+/obj/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door_control{
+	desc = "A remote control switch for a door. Wow, that's a mouthful.";
+	id = "art";
+	name = "Emergency Artfiact Flusher Shutter Control";
+	pixel_y = -20;
+	pixel_x = 0;
+	dir = 1
+	},
+/obj/artifact_spawner,
+/turf/simulated/floor/circuit/purple,
+/area/station/science/artifact)
 "lUP" = (
 /obj/disposalpipe/segment,
 /obj/cable{
@@ -17237,12 +17503,76 @@
 "mqJ" = (
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/mining/magnet)
+"msA" = (
+/obj/machinery/atmospherics/binary/valve{
+	name = "hot auxiliary valve";
+	dir = 8
+	},
+/turf/simulated/floor/engine,
+/area/station/engine/core)
 "mtA" = (
 /obj/cable{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/station/hallway/primary/east)
+"mtM" = (
+/obj/machinery/door_control{
+	id = "ai_core";
+	name = "AI Core Shield";
+	pixel_x = 25;
+	pixel_y = 0;
+	dir = 4
+	},
+/obj/landmark/start/job/AI,
+/obj/machinery/camera{
+	c_tag = "autotag";
+	dir = 6;
+	name = "autoname - SS13";
+	pixel_y = 20;
+	tag = ""
+	},
+/obj/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/data_terminal,
+/obj/item/device/radio/intercom/AI{
+	broadcasting = 0
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/machinery/door_control{
+	id = "ai_core";
+	name = "AI Core Shield";
+	pixel_x = 28
+	},
+/obj/landmark/start/job/AI,
+/obj/machinery/camera{
+	c_tag = "autotag";
+	dir = 6;
+	name = "autoname - SS13";
+	pixel_y = 20;
+	tag = ""
+	},
+/obj/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/data_terminal,
+/obj/item/device/radio/intercom/AI{
+	broadcasting = 0
+	},
+/obj/machinery/camera{
+	c_tag = "autotag";
+	dir = 4;
+	name = "autoname - SS13";
+	pixel_x = -10;
+	tag = ""
+	},
+/turf/simulated/floor/circuit,
+/area/station/turret_protected/ai)
 "mvz" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/unary/portables_connector{
@@ -17321,6 +17651,16 @@
 /obj/disposalpipe/trunk,
 /turf/simulated/floor,
 /area/station/hallway/primary/south)
+"mIS" = (
+/obj/machinery/door_control{
+	id = "chamber_1";
+	name = "Vent Control";
+	pixel_y = -21;
+	pixel_x = 0;
+	dir = 1
+	},
+/turf/simulated/floor/caution/westeast,
+/area/station/science/lab)
 "mJm" = (
 /obj/storage/crate,
 /obj/decal/tile_edge/stripe/extra_big{
@@ -17387,9 +17727,7 @@
 /obj/machinery/door_control{
 	id = "ai_core";
 	name = "AI Core Shield";
-	pixel_x = 25;
-	pixel_y = 0;
-	dir = 4
+	pixel_x = 28
 	},
 /obj/landmark/start/job/AI,
 /obj/machinery/camera{
@@ -17405,6 +17743,13 @@
 /obj/machinery/power/data_terminal,
 /obj/item/device/radio/intercom/AI{
 	broadcasting = 0
+	},
+/obj/machinery/camera{
+	c_tag = "autotag";
+	dir = 4;
+	name = "autoname - SS13";
+	pixel_x = -10;
+	tag = ""
 	},
 /turf/simulated/floor/circuit,
 /area/station/turret_protected/ai)
@@ -17575,6 +17920,13 @@
 /obj/landmark/antagonist/blob,
 /turf/simulated/floor/plating/random,
 /area/station/maintenance/west)
+"nku" = (
+/obj/machinery/atmospherics/binary/valve{
+	dir = 4;
+	name = "cold purge valve"
+	},
+/turf/simulated/wall/auto/reinforced/supernorn,
+/area/station/maintenance/southeast)
 "nlP" = (
 /turf/simulated/floor/green/side{
 	dir = 1
@@ -17625,16 +17977,6 @@
 	},
 /turf/simulated/floor/red,
 /area/listeningpost)
-"nuK" = (
-/obj/stool/chair/office/yellow{
-	dir = 8
-	},
-/obj/cable{
-	icon_state = "1-2"
-	},
-/obj/landmark/start/job/engineer,
-/turf/simulated/floor/yellow,
-/area/station/engine/engineering)
 "nuN" = (
 /obj/cable{
 	icon_state = "4-8"
@@ -17702,18 +18044,13 @@
 /turf/simulated/floor/orangeblack,
 /area/station/engine/engineering)
 "nzG" = (
-/obj/machinery/light_switch/auto{
-	pixel_x = -24;
-	pixel_y = 5;
-	dir = 8
-	},
+/obj/machinery/light_switch/auto,
 /obj/submachine/ice_cream_dispenser,
 /obj/machinery/door_control{
 	id = "creamery_shutter";
 	name = "Creamery Shutter Control";
 	pixel_x = -24;
-	pixel_y = -6;
-	dir = 8
+	pixel_y = -6
 	},
 /turf/simulated/floor/black,
 /area/station/crew_quarters/bar)
@@ -17815,6 +18152,27 @@
 	},
 /turf/simulated/floor,
 /area/station/hallway/primary/north)
+"nSS" = (
+/obj/machinery/light{
+	layer = 3;
+	light_type = /obj/item/light/tube/light_purpleish
+	},
+/obj/stool/chair/office/purple{
+	dir = 1;
+	tag = "icon-office_chair_purple (WEST)"
+	},
+/obj/landmark/start/job/scientist,
+/obj/machinery/door_control{
+	id = "tele";
+	name = "Teleporter Blast Door Control";
+	pixel_x = -23;
+	pixel_y = 0;
+	dir = 8
+	},
+/turf/simulated/floor/purplewhite{
+	dir = 10
+	},
+/area/station/science/teleporter)
 "nUD" = (
 /obj/cable{
 	icon_state = "1-2"
@@ -17935,6 +18293,22 @@
 	icon_state = "catwalk_cross"
 	},
 /area/station/solar/north)
+"ojv" = (
+/obj/machinery/door/poddoor/pyro/shutters{
+	density = 0;
+	dir = 10;
+	icon_state = "pdoor0";
+	id = "ai_core";
+	name = "AI Core Shield";
+	opacity = 0
+	},
+/obj/cable,
+/obj/cable{
+	icon_state = "0-4"
+	},
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
+/turf/simulated/floor/circuit/off,
+/area/station/turret_protected/ai)
 "olo" = (
 /obj/decal/poster/wallsign/warning3,
 /turf/simulated/wall/auto/reinforced/supernorn,
@@ -18220,6 +18594,22 @@
 	},
 /turf/simulated/floor,
 /area/station/hallway/primary/south)
+"peJ" = (
+/obj/machinery/power/apc/autoname_north,
+/obj/cable{
+	icon_state = "0-2"
+	},
+/obj/decal/cleanable/cobweb,
+/obj/machinery/door_control{
+	name = "Janitor's Office Door Control";
+	pixel_x = -24;
+	id = "janidoor";
+	dir = 8
+	},
+/obj/reagent_dispensers/watertank,
+/obj/decal/stripe_caution,
+/turf/simulated/floor/purple,
+/area/station/janitor/office)
 "pgU" = (
 /obj/machinery/navbeacon/mule/hallway_escape_north/south,
 /obj/decal/mule/beacon,
@@ -18279,6 +18669,21 @@
 	},
 /turf/simulated/floor,
 /area/station/hallway/primary/south)
+"pkB" = (
+/obj/machinery/computer/bank_data{
+	dir = 4
+	},
+/obj/machinery/power/data_terminal,
+/obj/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/door_control/bolter/new_walls/south{
+	id = "quarters_hop";
+	pixel_x = 0;
+	pixel_y = 26
+	},
+/turf/simulated/floor/wood/two,
+/area/station/crew_quarters/heads)
 "pkT" = (
 /obj/submachine/fishing_upload_terminal/portable,
 /turf/simulated/floor,
@@ -18694,15 +19099,6 @@
 /obj/mapping_helper/firedoor_spawn,
 /turf/simulated/floor/carpet/grime,
 /area/station/chapel/sanctuary)
-"qyp" = (
-/obj/machinery/power/apc/autoname_east,
-/obj/cable,
-/obj/machinery/atmospherics/binary/valve,
-/obj/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/engine,
-/area/station/engine/coldloop)
 "qzG" = (
 /obj/machinery/firealarm/north,
 /turf/simulated/floor/stairs{
@@ -18807,9 +19203,7 @@
 /obj/machinery/door_control{
 	id = "chamber_2";
 	name = "Vent Control";
-	pixel_y = -21;
-	pixel_x = 0;
-	dir = 1
+	pixel_y = -24
 	},
 /turf/simulated/floor/caution/westeast,
 /area/station/science/lab)
@@ -19014,6 +19408,13 @@
 	dir = 4
 	},
 /area/station/mining/staff_room)
+"rqQ" = (
+/obj/machinery/atmospherics/binary/valve{
+	name = "mixing valve"
+	},
+/obj/submachine/cargopad/engineering,
+/turf/simulated/floor/caution/west,
+/area/station/engine/core)
 "rsR" = (
 /obj/cable{
 	icon_state = "1-2"
@@ -19083,6 +19484,19 @@
 /obj/disposalpipe/segment,
 /turf/simulated/floor,
 /area/station/security/main)
+"rBP" = (
+/obj/machinery/camera{
+	c_tag = "autotag";
+	dir = 6;
+	name = "autoname - SS13";
+	pixel_y = 20;
+	tag = "";
+	pixel_x = -18
+	},
+/turf/simulated/floor/blueblack{
+	dir = 1
+	},
+/area/station/turret_protected/ai)
 "rCf" = (
 /obj/cable{
 	icon_state = "4-8"
@@ -19103,10 +19517,6 @@
 	},
 /turf/simulated/floor/blueblack,
 /area/station/turret_protected/ai)
-"rFr" = (
-/obj/machinery/atmospherics/binary/valve,
-/turf/simulated/floor/engine,
-/area/station/engine/hotloop)
 "rGB" = (
 /obj/machinery/recharge_station,
 /obj/decal/tile_edge/stripe/extra_big{
@@ -19144,6 +19554,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/security/brig/genpop)
+"rMD" = (
+/obj/stool/chair/office/yellow{
+	dir = 8
+	},
+/obj/cable{
+	icon_state = "1-2"
+	},
+/obj/landmark/start/job/technical_assistant,
+/turf/simulated/floor/yellow,
+/area/station/engine/engineering)
 "rNn" = (
 /obj/machinery/light{
 	dir = 8;
@@ -19215,6 +19635,21 @@
 	},
 /turf/simulated/grimycarpet,
 /area/station/crew_quarters/catering)
+"rYo" = (
+/obj/table/auto,
+/obj/item/kitchen/rollingpin{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/obj/machinery/glass_recycler/bar{
+	pixel_y = 9;
+	pixel_x = -1;
+	g_amt = 10
+	},
+/turf/simulated/floor/white/side{
+	dir = 4
+	},
+/area/station/crew_quarters/kitchen)
 "ses" = (
 /obj/cable{
 	icon_state = "1-2"
@@ -19446,12 +19881,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/quartermaster/office)
-"tap" = (
-/obj/cable/orange{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/engine,
-/area/station/engine/core)
 "tbE" = (
 /obj/cable{
 	icon_state = "1-2"
@@ -19601,6 +20030,15 @@
 	dir = 10
 	},
 /area/station/engine/elect)
+"tmM" = (
+/obj/item/device/radio/intercom/bridge{
+	pixel_x = -6;
+	pixel_y = 22
+	},
+/turf/simulated/floor/stairs{
+	dir = 8
+	},
+/area/station/bridge)
 "tmW" = (
 /obj/cable{
 	icon_state = "4-8"
@@ -20191,13 +20629,6 @@
 	dir = 1
 	},
 /area/station/crew_quarters/kitchen)
-"uSJ" = (
-/obj/machinery/atmospherics/binary/valve{
-	dir = 4;
-	name = "hot loop valve"
-	},
-/turf/simulated/floor/engine,
-/area/station/engine/core)
 "uTl" = (
 /obj/grille/catwalk,
 /obj/machinery/light/small{
@@ -20241,6 +20672,12 @@
 	},
 /turf/simulated/floor/engine,
 /area/station/science/teleporter)
+"uWJ" = (
+/obj/machinery/atmospherics/binary/valve{
+	name = "cold inlet valve"
+	},
+/turf/simulated/floor/engine,
+/area/station/engine/coldloop)
 "uYa" = (
 /obj/machinery/light{
 	dir = 1;
@@ -20342,6 +20779,13 @@
 "vgX" = (
 /turf/simulated/floor/grime,
 /area/station/mining/magnet)
+"vhN" = (
+/obj/cable/orange{
+	icon_state = "1-4"
+	},
+/obj/landmark/start/job/engineer,
+/turf/simulated/floor/engine,
+/area/station/engine/core)
 "vhR" = (
 /obj/cable{
 	icon_state = "0-4"
@@ -20352,6 +20796,21 @@
 	},
 /turf/simulated/floor/orangeblack,
 /area/station/engine/engineering)
+"vjp" = (
+/obj/stool/bed,
+/obj/item/clothing/suit/bedsheet/pink,
+/obj/landmark/start/job/janitor,
+/obj/machinery/door_control{
+	id = "crusher";
+	name = "Crusher Door Control";
+	pixel_x = 24;
+	pixel_y = -2;
+	dir = 4
+	},
+/turf/simulated/floor/purple/side{
+	dir = 5
+	},
+/area/station/janitor/office)
 "vkO" = (
 /obj/mapping_helper/firedoor_spawn,
 /obj/machinery/door/airlock/pyro/glass,
@@ -20381,6 +20840,13 @@
 	dir = 8
 	},
 /area/station/mining/staff_room)
+"vpg" = (
+/obj/machinery/atmospherics/binary/valve{
+	dir = 4;
+	name = "hot purge valve"
+	},
+/turf/simulated/wall/auto/reinforced/supernorn,
+/area/station/maintenance/southwest)
 "vqf" = (
 /obj/machinery/atmospherics/unary/portables_connector{
 	dir = 8
@@ -20442,6 +20908,22 @@
 	},
 /turf/simulated/floor/orangeblack,
 /area/station/engine/engineering)
+"vxb" = (
+/obj/machinery/light_switch/auto{
+	pixel_x = -24;
+	pixel_y = 5;
+	dir = 8
+	},
+/obj/submachine/ice_cream_dispenser,
+/obj/machinery/door_control{
+	id = "creamery_shutter";
+	name = "Creamery Shutter Control";
+	pixel_x = -24;
+	pixel_y = -6;
+	dir = 8
+	},
+/turf/simulated/floor/black,
+/area/station/crew_quarters/bar)
 "vyf" = (
 /obj/submachine/chef_sink/chem_sink{
 	dir = 8;
@@ -20460,12 +20942,6 @@
 	},
 /turf/simulated/floor/sanitary,
 /area/station/medical/medbay/surgery)
-"vCI" = (
-/obj/machinery/atmospherics/binary/valve{
-	name = "hot loop bypass valve"
-	},
-/turf/simulated/floor/engine,
-/area/station/engine/core)
 "vEm" = (
 /obj/disposalpipe/segment,
 /obj/cable{
@@ -20552,6 +21028,24 @@
 /obj/machinery/computer3/terminal/zeta,
 /turf/simulated/floor/circuit,
 /area/station/turret_protected/ai)
+"vQM" = (
+/obj/machinery/door/poddoor/pyro/shutters{
+	density = 0;
+	dir = 9;
+	icon_state = "pdoor0";
+	id = "ai_core";
+	name = "AI Core Shield";
+	opacity = 0
+	},
+/obj/cable{
+	icon_state = "0-2"
+	},
+/obj/cable{
+	icon_state = "0-4"
+	},
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
+/turf/simulated/floor/circuit/off,
+/area/station/turret_protected/ai)
 "vSz" = (
 /obj/machinery/alarm{
 	pixel_y = 25
@@ -20563,6 +21057,21 @@
 	dir = 8
 	},
 /area/station/crew_quarters/cafeteria)
+"vTs" = (
+/obj/machinery/atmospherics/binary/pump/active{
+	dir = 8;
+	frequency = 1225;
+	id = "Combustion Chamber Inlet 2";
+	target_pressure = 1000
+	},
+/obj/machinery/door_control{
+	id = "vent";
+	name = "Combustion Chamber Vent Control";
+	pixel_x = -25;
+	dir = 8
+	},
+/turf/simulated/floor/caution/northsouth,
+/area/station/engine/core)
 "vUm" = (
 /obj/decal/mule/dropoff,
 /turf/simulated/floor,
@@ -20682,6 +21191,26 @@
 /obj/landmark/gps_waypoint,
 /turf/simulated/floor/plating/random,
 /area/station/engine/substation/west)
+"wfp" = (
+/obj/machinery/door_control{
+	id = "medbay_hall";
+	name = "Medbay Door Control";
+	pixel_x = 24;
+	pixel_y = -2;
+	timer = 100;
+	dir = 4
+	},
+/obj/cable{
+	icon_state = "1-2"
+	},
+/obj/cable{
+	icon_state = "1-8"
+	},
+/obj/disposalpipe/segment,
+/turf/simulated/floor/bluewhite{
+	dir = 5
+	},
+/area/station/medical/medbay)
 "wgv" = (
 /obj/machinery/door/poddoor/pyro/shutters{
 	id = "kitchen_shutter";
@@ -20786,6 +21315,23 @@
 /obj/machinery/door/airlock/pyro/glass,
 /turf/simulated/floor/twotone/black,
 /area/station/crew_quarters/cafeteria)
+"wCi" = (
+/obj/machinery/door/poddoor/pyro/shutters{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "ai_core";
+	name = "AI Core Shield";
+	opacity = 0
+	},
+/obj/cable{
+	icon_state = "0-8"
+	},
+/obj/cable{
+	icon_state = "0-4"
+	},
+/obj/mapping_helper/wingrille_spawn/auto/reinforced,
+/turf/simulated/floor/circuit/off,
+/area/station/turret_protected/ai)
 "wFl" = (
 /obj/machinery/firealarm/north,
 /obj/machinery/portable_reclaimer,
@@ -20834,29 +21380,6 @@
 /mob/living/carbon/human/npc/monkey/albert,
 /turf/simulated/floor/black,
 /area/station/storage/tech)
-"wLy" = (
-/obj/table/auto,
-/obj/machinery/door_control{
-	id = "kitchen_shutter";
-	name = "Kitchen Shutter Control";
-	pixel_x = -24;
-	pixel_y = -9;
-	dir = 8
-	},
-/obj/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/phone/wall{
-	pixel_x = -24;
-	pixel_y = 11
-	},
-/obj/machinery/glass_recycler/bar{
-	pixel_y = 9;
-	pixel_x = -1;
-	g_amt = 10
-	},
-/turf/simulated/floor/auto/grass,
-/area/station/crew_quarters/kitchen)
 "wLS" = (
 /obj/disposalpipe/segment{
 	dir = 4;
@@ -20879,6 +21402,26 @@
 	},
 /turf/simulated/floor,
 /area/station/hallway/primary/east)
+"wOS" = (
+/obj/machinery/computer3/generic/communications{
+	dir = 4
+	},
+/obj/machinery/power/data_terminal,
+/obj/cable{
+	icon_state = "0-4"
+	},
+/obj/effects/background_objects/x5,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -15
+	},
+/obj/machinery/door_control/bolter/new_walls/north{
+	id = "quarters_cap";
+	pixel_x = 0;
+	pixel_y = -21
+	},
+/turf/simulated/floor/carpet/arcade,
+/area/station/bridge/captain)
 "wPf" = (
 /obj/cable{
 	icon_state = "4-8"
@@ -20941,6 +21484,23 @@
 	dir = 1
 	},
 /area/listeningpost)
+"xcr" = (
+/obj/machinery/door_control{
+	id = "kitchen_shutter";
+	name = "Kitchen Shutter Control";
+	pixel_x = -24;
+	pixel_y = -6
+	},
+/obj/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/phone/wall{
+	pixel_x = -24;
+	pixel_y = 11
+	},
+/obj/machinery/computer/announcement/station/catering,
+/turf/simulated/floor/auto/grass,
+/area/station/crew_quarters/kitchen)
 "xcB" = (
 /obj/machinery/door/airlock/pyro/alt{
 	dir = 4;
@@ -21086,6 +21646,19 @@
 /obj/mapping_helper/firedoor_spawn,
 /turf/simulated/floor,
 /area/station/hallway/primary/south)
+"xxs" = (
+/obj/disposalpipe/segment/brig{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/door_timer/genpop/new_walls/north{
+	pixel_x = 0;
+	pixel_y = -22
+	},
+/turf/simulated/floor/red/side{
+	dir = 6
+	},
+/area/station/security/main)
 "xyg" = (
 /obj/shrub{
 	dir = 6
@@ -55588,7 +56161,7 @@ aax
 aiW
 aiW
 aiW
-aYV
+vpg
 ajZ
 apX
 ara
@@ -55596,7 +56169,7 @@ ara
 ara
 ato
 igD
-jUG
+nku
 aiW
 aiW
 aiW
@@ -57102,8 +57675,8 @@ aQx
 jWt
 rNn
 aZa
-kIP
-aeU
+dIO
+vTs
 auC
 avx
 aww
@@ -57403,9 +57976,9 @@ aii
 anr
 apd
 apQ
-fyE
+kYF
 cJH
-fyE
+kYF
 avz
 avy
 awx
@@ -57704,11 +58277,11 @@ akN
 akN
 ant
 api
-uSJ
+kmL
 lMj
-fHe
+msA
 lMj
-bxK
+eFo
 avD
 awx
 aYR
@@ -58005,7 +58578,7 @@ aVQ
 ang
 akN
 aof
-vCI
+lpk
 aqa
 arU
 vug
@@ -58594,7 +59167,7 @@ aaa
 aaq
 acJ
 acJ
-kjy
+afn
 gpH
 fVw
 adT
@@ -58613,7 +59186,7 @@ apZ
 aqY
 sNo
 uBu
-tap
+vhN
 avz
 awB
 ayy
@@ -59511,21 +60084,21 @@ azo
 bZQ
 akN
 irz
-rFr
+hvC
 qve
 mkM
 qAu
 jca
 cvv
 gus
-dQd
+rqQ
 eCv
 hTW
 uBF
 yjD
 bhP
 tSd
-diS
+uWJ
 mvz
 azG
 aEr
@@ -60126,7 +60699,7 @@ xFc
 gML
 vhR
 apy
-awy
+cvx
 anp
 rhf
 oWx
@@ -60417,21 +60990,21 @@ sIm
 tmW
 akN
 dCj
-fcV
+bhv
 drv
 hmC
 avE
 xLn
 udk
 asb
-nuK
+rMD
 asb
 udk
 tvu
 avE
 awD
 azK
-qyp
+hgE
 aQA
 azG
 axH
@@ -61045,7 +61618,7 @@ aEx
 aFf
 aWI
 aFZ
-aHn
+nSS
 aGG
 aXW
 aIP
@@ -62560,7 +63133,7 @@ aGG
 aXW
 aIR
 aHE
-huR
+mIS
 aIR
 aIR
 azD
@@ -63158,7 +63731,7 @@ ain
 aEC
 aCz
 aCj
-aIg
+kTQ
 agF
 aGG
 aXW
@@ -64338,7 +64911,7 @@ afu
 aSI
 aEN
 agR
-aiv
+cDH
 afo
 acv
 aca
@@ -64349,9 +64922,9 @@ akl
 aqD
 aXy
 rDv
-asw
-aPa
-avt
+vQM
+jUu
+ojv
 avJ
 awH
 aqD
@@ -64372,7 +64945,7 @@ aDb
 aCs
 aIR
 aJS
-qJI
+fij
 aIR
 aIR
 aIR
@@ -64651,10 +65224,10 @@ akl
 aqD
 aBc
 rDv
-asV
+wCi
 mRp
 asV
-avK
+avJ
 awI
 aqD
 xEr
@@ -64956,7 +65529,7 @@ rDv
 atc
 auP
 avv
-avJ
+avK
 awJ
 aqD
 aWe
@@ -65877,7 +66450,7 @@ aAm
 aFn
 aFn
 aVC
-hPY
+lUI
 aDU
 aIw
 aIV
@@ -69175,7 +69748,7 @@ adF
 vXs
 ltD
 nZX
-nzG
+vxb
 aUR
 arK
 ahr
@@ -69793,7 +70366,7 @@ qiA
 iAV
 vZk
 cUy
-aQl
+wfp
 uri
 bBt
 aPJ
@@ -70679,7 +71252,7 @@ xAd
 hrc
 pmb
 kzg
-wLy
+xcr
 ygO
 bdZ
 tUb
@@ -70979,7 +71552,7 @@ mqh
 vEm
 iqM
 ofD
-gZH
+rYo
 tRn
 cXf
 tZl
@@ -71313,7 +71886,7 @@ aBx
 aXP
 aZN
 ayF
-adR
+hMI
 afg
 aBx
 pdA
@@ -73099,7 +73672,7 @@ ahJ
 ahU
 agE
 anD
-alp
+gla
 avu
 anD
 anD
@@ -74008,7 +74581,7 @@ aky
 alv
 amt
 anR
-aoJ
+xxs
 anD
 aVk
 arP
@@ -76716,7 +77289,7 @@ mes
 aek
 aew
 aew
-afJ
+ffx
 agm
 yeC
 eBZ
@@ -77051,7 +77624,7 @@ aET
 aDN
 juI
 aEV
-jRP
+peJ
 aIp
 aFa
 aJe
@@ -78861,7 +79434,7 @@ auX
 azf
 aEZ
 xGP
-hvs
+vjp
 aZj
 aHM
 aIm
@@ -79446,7 +80019,7 @@ aSl
 rOr
 aoc
 aoS
-izG
+wOS
 amu
 asq
 asq
@@ -79454,7 +80027,7 @@ aun
 asq
 asq
 aBK
-iAi
+pkB
 aZL
 aSk
 aDR
@@ -80355,7 +80928,7 @@ oIn
 ams
 amu
 arM
-awi
+tmM
 aue
 asN
 arM
@@ -80657,7 +81230,7 @@ apG
 apG
 amu
 aIU
-loB
+kdf
 auf
 qGk
 avd
