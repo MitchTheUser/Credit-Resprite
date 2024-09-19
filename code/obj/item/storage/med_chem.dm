@@ -223,7 +223,7 @@
 
 /obj/item/storage/box/gl_kit
 	name = "prescription glasses box"
-	icon_state = "id"
+	icon_state = "glasses"
 	desc = "A box filled with corrective-lens glasses."
 	spawn_contents = list(/obj/item/clothing/glasses/regular = 7)
 
@@ -241,11 +241,11 @@
 
 /obj/item/storage/box/injectbox
 	name = "DNA injectors"
-	icon_state = "box"
+	icon_state = "syringe"
 
 /obj/item/storage/box/stma_kit
 	name = "sterile masks box"
-	icon_state = "latex"
+	icon_state = "masks"
 	desc = "A box containing sterile masks to help protect from airborne diseases."
 	spawn_contents = list(/obj/item/clothing/mask/surgical = 7)
 
@@ -263,13 +263,13 @@
 
 /obj/item/storage/box/iv_box
 	name = "\improper IV drip box"
-	icon_state = "patches"
+	icon_state = "iv"
 	desc = "A box of empty, sterile IV drips, ready to be filled with donated blood, or healing chemicals. Or whatever."
 	spawn_contents = list(/obj/item/reagent_containers/iv_drip = 7)
 
 /obj/item/storage/box/body_bag
 	name = "body bag box"
-	icon_state = "trashybs"
+	icon_state = "bodybag"
 	desc = "A box containing body bags*, which, like the name suggests, are used for transporting bodies around. Usually dead ones.<br><small><i>*Bodies not included.</i></small>"
 	spawn_contents = list(/obj/item/body_bag = 7)
 

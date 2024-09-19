@@ -20,7 +20,7 @@
 
 /obj/item/storage/box/morphineinjectors
 	name = "morphine autoinjector box"
-	icon_state = "box"
+	icon_state = "injector"
 	desc = "Contains six morphine autoinjectors, for security use"
 	spawn_contents = list(/obj/item/reagent_containers/emergency_injector/morphine = 6)
 
@@ -33,7 +33,7 @@
 // For sec officers and the HoS. Really love spawning with a full backpack (Convair880).
 /obj/item/storage/box/security_starter_kit
 	name = "security starter kit"
-	icon_state = "handcuff"
+	icon_state = "sec-starter"
 	desc = "Essential security supplies. Keep out of reach of the clown."
 	spawn_contents = list(/obj/item/handcuffs = 3,\
 	/obj/item/ammo/power_cell/med_power,\
@@ -92,25 +92,25 @@
 
 /obj/item/storage/box/revolver_ammo
 	name = "revolver ammo box"
-	icon_state = "revolver"
+	icon_state = "ammobox-357AP"
 	desc = "A box containing armour-piercing (AP) revolver rounds."
 	spawn_contents = list(/obj/item/ammo/bullets/a357/AP = 3)
 
 /obj/item/storage/box/revolver_ammo2
 	name = "revolver ammo box"
-	icon_state = "revolver"
+	icon_state = "ammobox-357"
 	desc = "A box containing standard revolver rounds."
 	spawn_contents = list(/obj/item/ammo/bullets/a357 = 3)
 
 /obj/item/storage/box/ammo38AP // 2 TC for 1 speedloader was very poor value compared to other guns and traitor items in general (Convair880).
 	name = ".38 AP ammo box"
-	icon_state = "revolver"
+	icon_state = "ammobox-38AP"
 	desc = "A box containing a couple of AP speedloaders for a .38 Special revolver."
 	spawn_contents = list(/obj/item/ammo/bullets/a38/AP = 3)
 
 /obj/item/storage/box/flaregun // For surplus crates (Convair880).
 	name = "flare gun box"
-	icon_state = "revolver"
+	icon_state = "flare"
 	desc = "A box containing a flare gun and spare ammo."
 	spawn_contents = list(/obj/item/gun/kinetic/flaregun,\
 	/obj/item/ammo/bullets/flare)

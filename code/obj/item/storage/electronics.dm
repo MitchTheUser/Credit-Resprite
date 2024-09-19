@@ -6,6 +6,7 @@
 
 /obj/item/storage/box/cablesbox/reinforced
 	name = "reinforced electrical cables storage"
+	icon_state = "cables-reinforced"
 	spawn_contents = list(/obj/item/cable_coil/reinforced = 7)
 
 /obj/item/storage/box/PDAbox
@@ -55,7 +56,7 @@
 
 /obj/item/storage/box/guardbot_kit
 	name = "\improper Guardbot construction kit"
-	icon_state = "flashbang"
+	icon_state = "guardbuddy"
 	desc = "A useful kit for building guardbuddies. All you need is a module!"
 	spawn_contents = list(/obj/item/guardbot_frame,\
 	/obj/item/guardbot_core,\

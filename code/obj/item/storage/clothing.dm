@@ -8,6 +8,7 @@
 
 /obj/item/storage/box/clothing/captain
 	name = "\improper Captain's clothing"
+	icon_state = "captain"
 	spawn_contents = list(/obj/item/clothing/under/rank/captain,
 	/obj/item/clothing/under/rank/captain/dress,
 	/obj/item/clothing/head/fancy/captain,
@@ -18,6 +19,7 @@
 
 /obj/item/storage/box/clothing/hos
 	name = "\improper Head of Security's clothing"
+	icon_state = "HoS"
 	spawn_contents = list(/obj/item/clothing/under/rank/head_of_security,
 	/obj/item/clothing/under/rank/head_of_security/dress,
 	/obj/item/clothing/under/suit/hos,
@@ -26,6 +28,7 @@
 	/obj/item/clothing/suit/wintercoat/command)
 
 /obj/item/storage/box/clothing/hop
+	icon_state = "HoP"
 	name = "\improper Head of Personnel's clothing"
 	spawn_contents = list(/obj/item/clothing/under/rank/head_of_personnel,
 	/obj/item/clothing/under/rank/head_of_personnel/dress,
@@ -37,6 +40,7 @@
 
 /obj/item/storage/box/clothing/research_director
 	name = "\improper Research Director's clothing"
+	icon_state = "RD"
 	spawn_contents = list(/obj/item/clothing/under/rank/research_director,
 	/obj/item/clothing/under/rank/research_director/dress,
 	/obj/item/clothing/suit/labcoat/research_director,
@@ -46,6 +50,7 @@
 
 /obj/item/storage/box/clothing/medical_director
 	name = "\improper Medical Director's clothing"
+	icon_state = "MD"
 	spawn_contents = list(/obj/item/clothing/under/rank/medical_director,
 	/obj/item/clothing/under/rank/medical_director/dress,
 	/obj/item/clothing/suit/labcoat/medical_director,
@@ -55,6 +60,7 @@
 
 /obj/item/storage/box/clothing/chief_engineer
 	name = "\improper Chief Engineer's clothing"
+	icon_state = "CE"
 	spawn_contents = list(/obj/item/clothing/under/rank/chief_engineer,
 	/obj/item/clothing/under/rank/chief_engineer/dress,
 	/obj/item/clothing/head/fancy/rank,
@@ -66,6 +72,7 @@
 
 /obj/item/storage/box/clothing/janitor
 	name = "\improper Janitor's equipment"
+	icon_state = "janitor"
 	spawn_contents = list(/obj/item/clothing/under/rank/janitor,\
 	/obj/item/clothing/shoes/brown,\
 	/obj/item/device/radio/headset/civilian,\
@@ -78,6 +85,7 @@
 
 /obj/item/storage/box/clothing/botanist
 	name = "\improper Botanist's equipment"
+	icon_state = "botanist"
 	spawn_contents = list(/obj/item/clothing/under/rank/hydroponics,\
 	/obj/item/clothing/shoes/brown,\
 	/obj/item/device/radio/headset/civilian,\
@@ -91,6 +99,7 @@
 
 /obj/item/storage/box/clothing/rancher
 	name = "\improper Rancher's equipment"
+	icon_state = "rancher"
 	spawn_contents = list(/obj/item/clothing/under/rank/rancher,\
 	/obj/item/clothing/shoes/westboot/brown/rancher,\
 	/obj/item/device/radio/headset/civilian,\
@@ -104,6 +113,7 @@
 
 /obj/item/storage/box/clothing/chef
 	name = "\improper Chef's equipment"
+	icon_state = "chef"
 	spawn_contents = list(/obj/item/clothing/under/rank/chef,\
 	/obj/item/clothing/shoes/chef,\
 	/obj/item/clothing/head/chefhat,\
@@ -113,6 +123,7 @@
 
 /obj/item/storage/box/clothing/souschef
 	name = "\improper Sous-Chef's equipment"
+	icon_state = "sous_chef"
 	spawn_contents = list(/obj/item/clothing/under/misc/souschef,\
 	/obj/item/clothing/shoes/chef,\
 	/obj/item/clothing/head/souschefhat,\
@@ -122,6 +133,7 @@
 
 /obj/item/storage/box/clothing/bartender
 	name = "\improper Bartender's equipment"
+	icon_state = "bartender"
 	spawn_contents = list(/obj/item/clothing/under/rank/bartender,\
 	/obj/item/clothing/shoes/black,\
 	/obj/item/device/radio/headset/civilian,\
@@ -129,6 +141,7 @@
 
 /obj/item/storage/box/clothing/waiter
 	name = "\improper Waiter's equipment"
+	icon_state = "bartender"
 	spawn_contents = list(/obj/item/clothing/under/rank/bartender,\
 	/obj/item/clothing/shoes/black,\
 	/obj/item/clothing/suit/wcoat,\
@@ -137,6 +150,7 @@
 
 /obj/item/storage/box/clothing/chaplain
 	name = "\improper Chaplain's equipment"
+	icon_state = "chaplain"
 	spawn_contents = list(/obj/item/clothing/under/rank/chaplain,\
 	/obj/item/clothing/shoes/black,\
 	/obj/item/device/radio/headset/civilian,\
@@ -146,6 +160,7 @@
 
 /obj/item/storage/box/clothing/security
 	name = "\improper Security Officer's equipment"
+	icon_state = "security_officer"
 	spawn_contents = list(/obj/item/clothing/under/rank/security,\
 	/obj/item/clothing/shoes/swat,\
 	/obj/item/device/radio/headset/security,\
@@ -153,6 +168,7 @@
 
 /obj/item/storage/box/clothing/detective
 	name = "\improper Detective's equipment"
+	icon_state = "detective"
 	spawn_contents = list(/obj/item/clothing/under/rank/det,\
 	/obj/item/clothing/shoes/detective,\
 	/obj/item/clothing/suit/det_suit,\
@@ -165,6 +181,7 @@
 
 /obj/item/storage/box/clothing/medical
 	name = "\improper Medical Doctor's equipment"
+	icon_state = "medical_doctor"
 	spawn_contents = list(/obj/item/clothing/under/rank/medical,\
 	/obj/item/clothing/shoes/red,\
 	/obj/item/clothing/suit/labcoat,\
@@ -173,6 +190,7 @@
 
 /obj/item/storage/box/clothing/geneticist
 	name = "\improper Geneticist's equipment"
+	icon_state = "geneticist"
 	spawn_contents = list(/obj/item/clothing/under/rank/geneticist,\
 	/obj/item/clothing/shoes/white,\
 	/obj/item/clothing/suit/labcoat/genetics,\
@@ -182,6 +200,7 @@
 
 /obj/item/storage/box/clothing/roboticist
 	name = "\improper Roboticist's equipment"
+	icon_state = "roboticist"
 	spawn_contents = list(/obj/item/clothing/under/rank/roboticist,\
 	/obj/item/clothing/shoes/black,\
 	/obj/item/clothing/suit/labcoat/robotics,\
@@ -194,6 +213,7 @@
 
 /obj/item/storage/box/clothing/research
 	name = "\improper Researcher's equipment"
+	icon_state = "scientist"
 	spawn_contents = list(/obj/item/clothing/under/rank/scientist,\
 	/obj/item/clothing/shoes/white,\
 	/obj/item/clothing/suit/labcoat,\
@@ -204,12 +224,14 @@
 
 /obj/item/storage/box/clothing/mechanic
 	name = "\improper Mechanic's equipment"
+	icon_state = "mechanic"
 	spawn_contents = list(/obj/item/clothing/under/rank/mechanic,\
 	/obj/item/clothing/shoes/black,\
 	/obj/item/clothing/under/rank/orangeoveralls/yellow)
 
 /obj/item/storage/box/clothing/engineer
 	name = "\improper Engineer's equipment"
+	icon_state = "engineer"
 	spawn_contents = list(/obj/item/clothing/under/rank/engineer,\
 	/obj/item/clothing/shoes/orange,\
 	/obj/item/device/radio/headset/engineer,\
@@ -218,6 +240,7 @@
 
 /obj/item/storage/box/clothing/miner
 	name = "\improper Miner's equipment"
+	icon_state = "miner"
 	spawn_contents = list(/obj/item/clothing/under/rank/overalls,\
 	/obj/item/clothing/shoes/orange,\
 	/obj/item/clothing/gloves/black,\
@@ -226,6 +249,7 @@
 
 /obj/item/storage/box/clothing/qm
 	name = "\improper Quartermaster's equipment"
+	icon_state = "QM"
 	spawn_contents = list(/obj/item/clothing/under/rank/cargo,\
 	/obj/item/clothing/shoes/black,\
 	/obj/item/clothing/gloves/black,\
@@ -255,6 +279,7 @@
 
 /obj/item/storage/box/clothing/mail
 	name = "\improper Postmaster's equipment"
+	icon_state = "mail_courier"
 	spawn_contents = list(/obj/item/clothing/under/misc/mail,\
 	/obj/item/clothing/head/mailcap,\
 	/obj/item/clothing/shoes/black,\

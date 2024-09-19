@@ -730,6 +730,7 @@ proc/ui_describe_reagents(atom/A)
 /obj/item/storage/box/beaker_lids
 	name = "box of beaker lids"
 	desc = "A box full of beaker lids, for putting lids on your beakers. For when you need something that's open... closed."
+	icon_state = "lids"
 	spawn_contents = list(/obj/item/beaker_lid = 7)
 
 /obj/item/beaker_lid
